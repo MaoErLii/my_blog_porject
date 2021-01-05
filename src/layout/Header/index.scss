@@ -1,0 +1,22 @@
+.header-wrapper{
+    width: 100%;
+    display: flex;
+}
+
+.main-content{
+    margin: 0 40px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.last-content{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    // cursor: pointer;
+    user-select: none;
+}

@@ -1,0 +1,4 @@
+ <svg class="selector" viewBox="0 0 100 50" preserveAspectRatio="none">
+    <polygon class="red" points="10,20 80,20 80,30, 20,30"></polygon>
+    <polygon class="blue" points="30,10 90,30 100,35, 20,50"></polygon>
+  </svg>

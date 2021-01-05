@@ -1,0 +1,29 @@
+.menu__item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-width: 40px;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none !important;
+
+    &.is-disable{
+        color: rgba(0, 0, 0, .4);
+        cursor: not-allowed;
+    }
+
+    &.is-selected{
+        position: relative;
+        color: #4d0fda;
+    }
+
+    .menu__item-back{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}

@@ -1,0 +1,15 @@
+.desc-list__container{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .desc-list__item{
+        flex: 0 0 30%;
+        h1{
+            font-size: 20px;
+        }
+        p{
+            font-size: 17px;
+        }
+    }
+}
