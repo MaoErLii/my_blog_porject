@@ -50,7 +50,7 @@ const TimeLine: React.FC<timeLineProps> = (props) => {
                     >
                     </i>
                     <div className={'time-line__container'}>
-                        <h3 className={'time-line__title'}>
+                        <h3 className={'time-line__title'} onClick={() => {if(active !== index) {onSelect(index)}}}>
                             {item.title || '---'}
                         </h3>
                         {active === index? (
