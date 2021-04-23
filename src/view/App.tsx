@@ -3,11 +3,12 @@ import * as React from 'react'
 import { TransitionGroup, CSSTransition } from 'react-transition-group'
 // 路由相关
 import { Switch, Route, useHistory, useLocation } from 'react-router-dom'
+import routes from '@/router/index'
 // 页面
-import Home from '@/view/Home/index'
-import Anime from '@/view/Anime/index'
-import Games from '@/view/Games/index'
-import Gbf from '@/view/Gbf/index'
+// import Home from '@/view/Home/index'
+// import Anime from '@/view/Anime/index'
+// import Games from '@/view/Games/index'
+// import Gbf from '@/view/Gbf/index'
 // 组件
 import Header from '@/layout/Header/index'
 import Menu from '@/components/menu/index'
@@ -142,28 +143,7 @@ const App = () => {
     // console.log('路由location', location)
 
     // 路由列表
-    const menuList = [
-        {
-            path: '/',
-            name: '吼姆',
-            component: Home
-        },
-        {
-            path: '/anime',
-            name: '阿尼妹',
-            component: Anime
-        },
-        {
-            path: '/games',
-            name: 'gay姆嘶',
-            component: Games
-        },
-        {
-            path: '/gbf',
-            name: '古兰布鲁范特西',
-            component: Gbf
-        }
-    ]
+    const menuList = routes
 
     // 默认下标
     const defaultIndex = () => {
@@ -229,7 +209,7 @@ const App = () => {
                         return( <MenuItem key={index} linkTo={() => {
                             // console.log('之前的下标', defaultIndex())
                             // console.log('要跳转的下标', index)
-                            console.log('页面跳转')
+                            // console.log('页面跳转')
                             if(index < parseInt(defaultIndex())) {
                                 setDirection('backward')
                                 history.push(item.path)
