@@ -165,7 +165,7 @@ const App = () => {
     React.useEffect(() => {
         console.log('hooks')
         // console.log('App: \n', 'location:', location, '\n', 'history:', history)
-        window.addEventListener('resize',() => {
+        window.addEventListener('resize',() => {    
             console.log('resize')
             let canvas = canvasRef.current
             // const ctx = canvas.getContext('2d')
@@ -190,7 +190,7 @@ const App = () => {
 
     return (
         <div 
-            className={"app"}
+            className="app"
             onMouseMove={(e) => {
                 listenMouseMove(canvasRef, e)
             }}
@@ -203,27 +203,27 @@ const App = () => {
                 history.push('/')
             }}>
                 <Menu mode={"horizontal"} defaultIndex={defaultIndex()}>
-                {   
-                //** 渲染menu */
-                    menuList.map((item, index) => {
-                        return( <MenuItem key={index} linkTo={() => {
-                            // console.log('之前的下标', defaultIndex())
-                            // console.log('要跳转的下标', index)
-                            // console.log('页面跳转')
-                            if(index < parseInt(defaultIndex())) {
-                                setDirection('backward')
-                                history.push(item.path)
-                            } else if (index > parseInt(defaultIndex())){
-                                setDirection('forward')
-                                history.push(item.path)
-                            }
-                        }}>
-                            {item.name}
-                        </MenuItem>
-                    )
-                    })
-                }
-            </Menu>
+                    {   
+                    //** 渲染menu */
+                        menuList.map((item, index) => {
+                            return( <MenuItem key={index} linkTo={() => {
+                                // console.log('之前的下标', defaultIndex())
+                                // console.log('要跳转的下标', index)
+                                // console.log('页面跳转')
+                                if(index < parseInt(defaultIndex())) {
+                                    setDirection('backward')
+                                    history.push(item.path)
+                                } else if (index > parseInt(defaultIndex())){
+                                    setDirection('forward')
+                                    history.push(item.path)
+                                }
+                            }}>
+                                {item.name}
+                            </MenuItem>
+                        )
+                        })
+                    }
+                </Menu>
             </Header>
             {/* <Switch location={location}>
                 {menuList.map((route, index) => {

@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react"
 import './index.scss'
 
 const ABG:React.FC<any> = (porps: any) => {
-    const {children} = porps
+    const {children, animeFunc, generateFunc} = porps
 
     const canvasRef = useRef(null)
 
@@ -15,6 +15,8 @@ const ABG:React.FC<any> = (porps: any) => {
         window.addEventListener('resize', () => {})
         canvasRef.current.width = canvasRef.current.clientWidth
         canvasRef.current.height = canvasRef.current.clientHeight
+        generateFunc && generateFunc(canvasRef.current)
+        animeFunc && animeFunc(canvasRef.current)
     }, [])
 
     return (

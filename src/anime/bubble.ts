@@ -12,8 +12,8 @@ export class Bubble {
     public vx: number  // x轴移动方向
     public vy: number   // y轴移动方向
     public radius: number   // 气泡半径
-    public ctx: any // canvas context对象
-    constructor(x: number,y: number, ctx: any) {
+    public ctx: CanvasRenderingContext2D // canvas context 2d对象
+    constructor(x: number,y: number, ctx: CanvasRenderingContext2D) {
         this.ctx = ctx
         this.x = x
         this.y = y
