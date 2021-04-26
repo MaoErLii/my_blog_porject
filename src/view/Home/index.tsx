@@ -11,6 +11,8 @@ import Footer from '@/layout/Footer/index'
 
 import Snow from '@/anime/snow'
 
+import Joker from '@/images/joker.jpg'
+
 const snowList = []
 let animeId = true
 let frameId = undefined
@@ -81,7 +83,9 @@ const Home = (props: any) => {
     return (
         <div className={'home'}>
             <div className={'home__head'}>
-                <AnimeBG animeFunc={snwoAniem}></AnimeBG>
+                <AnimeBG animeFunc={snwoAniem}>
+                    <img style={{position: 'relative', margin: '0 auto', height: '100%'}} alt="" src={Joker}></img>
+                </AnimeBG>
             </div>
             <div className={'home__content'}>
                 <div className={'home__list'}>
